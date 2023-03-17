@@ -1,4 +1,5 @@
 # Binary Steganography
+A tool for hiding and unhiding binary files.
 
 ## Hide a file
 You provide the file that you want to hide a file in, the file you want to hide, and the name of the new file it will create.
