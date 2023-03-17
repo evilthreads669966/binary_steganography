@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
         newFile = args[2]
     val separator = "------666666------".toByteArray()
 
-
+    //unhide the file
     if(newFile == null){
         val originalFile = File(original)
         val bytes = originalFile.readBytes()
@@ -24,6 +24,8 @@ fun main(args: Array<String>) {
         println("$hiddenFile is unhidden")
         return
     }
+
+    //hide the file
     println("hiding $hidden inside of $original")
     val originalBytes = File(original).readBytes()
     val hiddenBytes = File(hidden).readBytes()
