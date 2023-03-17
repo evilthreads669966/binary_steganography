@@ -15,8 +15,7 @@ fun main(args: Array<String>) {
 
     //unhide the file
     if(newFile == null){
-        val originalFile = File(original)
-        val bytes = originalFile.readBytes()
+        val bytes = File(original).readBytes()
         val index = Bytes.indexOf(bytes, separator)
         val hiddenBytes = bytes.sliceArray(index + separator.size..bytes.size - 1)
         val hiddenFile = File(hidden)
