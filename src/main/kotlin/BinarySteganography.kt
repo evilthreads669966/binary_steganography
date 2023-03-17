@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     var newFile: String? = null
     if(args.size == 3)
         newFile = args[2]
-    val separator = "666666".toByteArray()
+    val separator = "------666666------".toByteArray()
 
 
     if(newFile == null){
