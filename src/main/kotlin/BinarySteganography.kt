@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
         println("$hiddenFile is unhidden")
         return
     }
-
+    println("hiding $hidden inside of $original")
     val originalBytes = File(original).readBytes()
     val hiddenBytes = File(hidden).readBytes()
     val file = File(newFile!!)
