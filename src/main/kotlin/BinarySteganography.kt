@@ -16,7 +16,6 @@ fun main(args: Array<String>) {
 
     if(newFile == null){
         val originalFile = File(original)
-        println(originalFile.readBytes())
         val bytes = originalFile.readBytes()
         val index = Bytes.indexOf(bytes, separator)
         val hiddenBytes = bytes.sliceArray(index + separator.size..bytes.size - 1)
