@@ -1,8 +1,8 @@
 import com.google.common.primitives.Bytes
 import java.io.*
 
-// hiding file example: java steg.kt original_file hidden_file new_file
-//unhiding file example: java steg.kt file new_file
+// hiding file example: java -jar Steg.jar original_file hidden_file new_file
+//unhiding file example: java -jar Steg.jar file new_file
 
 fun main(args: Array<String>) {
 
