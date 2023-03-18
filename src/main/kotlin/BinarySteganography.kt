@@ -33,9 +33,9 @@ fun main(args: Array<String>) {
     println("$newFile is created")
 }
 
-fun readBytes(file: String): ByteArray{
-    val ram = RandomAccessFile(file, "r")
-    val bytes = ByteArray(ram.length().toInt())
-    ram.readFully(bytes)
+fun readBytes(path: String): ByteArray{
+    val file = RandomAccessFile(path, "r")
+    val bytes = ByteArray(file.length().toInt())
+    file.readFully(bytes)
     return bytes
 }

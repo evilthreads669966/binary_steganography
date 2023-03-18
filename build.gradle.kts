@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.com.intellij.openapi.vfs.StandardFileSystems.jar
+
 plugins {
     kotlin("jvm") version "1.8.0"
     application
