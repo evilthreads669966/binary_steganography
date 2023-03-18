@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 
     //unhide the file
     if(newFile == null){
-        val bytes = File(original).readBytes()
+        val bytes = readBytes(original)
         val index = Bytes.indexOf(bytes, separator)
         val hiddenBytes = bytes.sliceArray(index + separator.size..bytes.size - 1)
         val hiddenFile = File(hidden)
@@ -26,9 +26,16 @@ fun main(args: Array<String>) {
 
     //hide the file
     println("hiding $hidden inside of $original")
-    val originalBytes = File(original).readBytes()
-    val hiddenBytes = File(hidden).readBytes()
+    val originalBytes = readBytes(original)
+    val hiddenBytes = readBytes(hidden)
     val file = File(newFile!!)
     file.writeBytes(originalBytes + separator + hiddenBytes)
     println("$newFile is created")
+}
+
+fun readBytes(file: String): ByteArray{
+    val ram = RandomAccessFile(file, "r")
+    val bytes = ByteArray(ram.length().toInt())
+    ram.readFully(bytes)
+    return bytes
 }
